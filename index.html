@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="Images/png" sizes="360x360" href="photos/Kirkuk Industrial School.png">
     <title>اعدادية كركوك المهنية</title>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 </head>
 <body>
     <header>
@@ -43,6 +44,14 @@
             </div>
         </div>
     </section>
+    <section class="newsletter">
+        
+        <h2>النشرة الإخبارية لدينا</h2>
+        <form id="newsletter-form">
+            <input type="email" id="email" name="email" placeholder="ادخل بريدك الالكتروني" required>
+            <button type="submit">اشترك</button>
+        </form>
+    </section>
     <footer class="footer">
         <p class="footer-title">Copyrights @<a href="https://saaeb.netlify.app">Saaeb Saad</a></p>
         <div class="social-icons">
@@ -50,7 +59,11 @@
             <a href="t.me/kerkukindustryschool"><i class="fa-brands fa-telegram"></i></a>
         </div>
     </footer>
-    
+    <script type="text/javascript">
+        (function() {
+            emailjs.init({publicKey: "z_lgbfOSm2ac8XI3v",});
+        })();
+    </script>
     <script src="app.js"></script>
 </body>
 </html>
