@@ -280,8 +280,12 @@ section {
     text-align: center;
     transition: all 0.4s ease;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    position: relative;
-    right: 51px;
+}
+@media(min-width: 1100px){
+    .department-btn {
+        position: relative;
+        right: 51px;
+    }
 }
 
 .department-btn:hover {
