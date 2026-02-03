@@ -68,3 +68,22 @@ if(document.readyState === 'loading'){
 } else {
     onPageLoad();
 }
+window.onload = function() {
+  document.getElementById('newsletter-form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent default form submission
+
+    // Replace with your Service ID, Template ID, and Public Key
+    const serviceID = 'service_tq8ccer';
+    const templateID = 'template_ubcrdya'; // Replace with your actual template ID
+    const publicKey = 'z_lgbfOSm2ac8XI3v'; // Can also use the init() call
+
+    emailjs.sendForm(serviceID, templateID, this, publicKey)
+      .then(() => {
+        alert('Subscribed successfully!');
+        this.reset(); // Reset form fields after submission
+      }, (error) => {
+        console.log('FAILED...', error);
+        alert('Something went wrong. Please try again.');
+      });
+  });
+}
